@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 *{
-   
+    margin:0;
     padding:0;
 }
 
@@ -32,18 +32,20 @@ nav ,
 }
 
 nav{
-    justify-content:  space-around ; 
+    justify-content: space-around;
     align-items:center  ; 
     height : 17vh ; 
+    margin:inline
 
 }
 
 .nav-links
 {
-    gap :2rem ; 
+    gap :2rem ;  
     list-style : none; 
     font-size: 1.5rem ;
 }
+
 
 a{
     color : black ;
@@ -94,23 +96,24 @@ a:hover {
 }
 
 .menu-links{
-    position : absolute ; 
-    top : 100% ; 
-    right : 0 ; 
-    background-color: white;
-    width : fit-content ; 
-    max-height:  0 ;
-    overflow : hidden ; 
-    transition : all 0.3 ease-in-out ; 
+    position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 1rem);
+        background-color: whitesmoke;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+        width: fit-content;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3 ease-in-out;
 }
 .menu-links a {
+
     display: block ;
     padding : 10px ; 
     text-align : center ;
     font-size: 1.5 rem ; 
-    color : black ; 
-    text-decoration : none ;
-    transition: all 0.3 ease-in-out;
+    
 }
 
 .menu-links li{
@@ -126,7 +129,10 @@ a:hover {
 }
 
 .hamburger-icon.open span:nth-child(2) {
-    opacity: 0;
+    display: none;
+}
+.hamburger-icon.open span:nth-child(3) {
+    display:  none ;
 }
 
 .hamburger-icon.open span:last-child {
@@ -330,7 +336,7 @@ section{
 }
 .arrow{
     position:absolute;
-    right:-5rem ; 
+    right:1.5rem ; 
     bottom : 2.5rem ;
 }
 .details-container
@@ -356,7 +362,7 @@ section{
 
 
 /* Experience Section */
-experience{
+.experience{
     position : relative ; 
 }
 
@@ -461,9 +467,25 @@ article.icon{
 
 footer {
     height: 26vh ;
-    margin : 0 1rem  ; 
+    width: 100%;
+    position : relative ;
+     
 }
 
 footer p {
     text-align: center;
+    margin-top : 1.5rem ;
+    
+}
+.footer-nav-links{
+    margin : auto;
+    display : flex ; 
+    justify-content: space-around; /*x-direction*/
+    align-items: center;/*y-direction*/
+    list-style: none;
+    width : 70%
+}
+
+.footer-nav{
+    width : 100%
 }
